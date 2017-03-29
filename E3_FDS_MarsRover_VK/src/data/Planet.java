@@ -13,7 +13,7 @@ public class Planet {
 	public boolean estaDentro(int x, int y){
 		boolean dentro = true;
 		
-		if(x>maxX || y>maxY)
+		if(x>maxX || y>maxY||x<0||y<0)
 				return false;
 		
 		return dentro;
