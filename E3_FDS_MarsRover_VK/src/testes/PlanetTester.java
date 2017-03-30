@@ -3,7 +3,7 @@ package testes;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
+
 
 import data.Planet;
 
@@ -15,7 +15,7 @@ public class PlanetTester {
 
 	@Before
 	public void setUpClass(){
-		planeta = new Planet(5,5);		
+		planeta = new Planet(5,5, "Marte");		
 	}
 
 	@Test

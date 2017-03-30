@@ -71,14 +71,22 @@ public class Rover {
 		return true;
 	}
 	
-		public boolean setViradoPara(int pos){
-			if(pos>4 | pos<1){
-				return false;
-			}
-			else{
-				this.viradoPara=pos;
-				return true;
-			}
+		public void setViradoPara(String ptCardeal){
+			String toLower = ptCardeal.toLowerCase();
+			
+			if(toLower.equals("norte")||toLower.equals("north"))
+				viradoPara=1;				
+			
+			if(toLower.equals("leste")||toLower.equals("east"))
+				viradoPara=2;				
+			
+			if(toLower.equals("sul")||toLower.equals("south"))
+				viradoPara=3;				
+			
+			if(toLower.equals("oeste")||toLower.equals("west"))
+				viradoPara=4;			
+			
+						
 		}
 
 

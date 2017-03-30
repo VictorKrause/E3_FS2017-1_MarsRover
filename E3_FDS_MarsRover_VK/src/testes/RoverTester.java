@@ -14,7 +14,7 @@ public class RoverTester {
 
 	@Before
 	public void beforeClassSetUp(){
-		planet = new Planet(5, 5);
+		planet = new Planet(5, 5, "Marte");
 		rover = new Rover(planet);
 		rover.setXY(0, 0);
 	}
@@ -109,20 +109,23 @@ public class RoverTester {
 	@Test
 	public void testDefinidoNoEnunciado2(){
 		rover.setXY(3, 3);
-		rover.setViradoPara(2);
+		rover.setViradoPara("east");
 		rover.moverPorComando("MMRMMRMRRM");
 		String expected = ("5, 1 2");
 		String actual = rover.getXY()+" "+ rover.getViradoPara();
 		assertEquals(expected,actual);
 	}
 	@Test
-	public void testSetViradoParaDeveFalhar(){
-		assertFalse(rover.setViradoPara(5));
+	public void testSetViradoParaNorte(){
+		rover.setViradoPara("Norte");
+		assertEquals(1,rover.getViradoPara());
 	}
 	@Test
-	public void testSetViradoParaDarCerto(){
-		assertTrue(rover.setViradoPara(1));
+	public void testSetViradoParaDeveFalhar(){
+		rover.setViradoPara("soutH");
+		assertNotEquals(1,rover.getViradoPara());
 	}
-
+	
+	
 }
 
