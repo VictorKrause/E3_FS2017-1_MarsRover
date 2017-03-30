@@ -37,9 +37,9 @@ public class Rover {
 		int yBackup = this.yAtual;
 
 		for (int i=0; i<linhaDeComando.length(); i++) { 
-			linhaDeComando.toLowerCase();
-			char c =linhaDeComando.charAt(i); 
-			if( c == 'w'){
+			String linhaDeComandoToLower = linhaDeComando.toLowerCase();
+			char c =linhaDeComandoToLower.charAt(i); 
+			if( c == 'm'){
 				if(viradoPara == 1)
 					yAtual++;
 				else if(viradoPara == 2)
@@ -56,7 +56,7 @@ public class Rover {
 			}
 			else if(c=='l'){
 				this.viradoPara--;
-				if(viradoPara<0)
+				if(viradoPara<1)
 					viradoPara=4;
 			}
 
@@ -70,6 +70,16 @@ public class Rover {
 
 		return true;
 	}
+	
+		public boolean setViradoPara(int pos){
+			if(pos>4 | pos<1){
+				return false;
+			}
+			else{
+				this.viradoPara=pos;
+				return true;
+			}
+		}
 
 
 }
