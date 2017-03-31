@@ -41,6 +41,7 @@ public class StartMainClass extends JFrame {
 	 * Create the frame.
 	 */
 	public StartMainClass() {
+		setResizable(false);
 		setTitle("MarsRover");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 333, 182);
