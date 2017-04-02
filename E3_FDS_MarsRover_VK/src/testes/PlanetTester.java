@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class PlanetTester {
 
-	Planet planeta;
+	private Planet planeta;
 
 	@Before
 	public void setUpClass(){

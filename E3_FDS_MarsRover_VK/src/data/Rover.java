@@ -27,7 +27,19 @@ public class Rover {
 		String XY = xAtual+", "+yAtual;
 		return XY;	
 	}
-	public int getViradoPara(){
+	public String getViradoPara(){
+		String viradoPara = "";
+		
+		if(this.viradoPara==1)
+			viradoPara="Norte";
+		else if(this.viradoPara==2)
+			viradoPara= "Leste";
+		else if(this.viradoPara==3)
+			viradoPara= "Sul";
+		else if(this.viradoPara==4)
+			viradoPara= "Oeste";
+		
+		
 		return viradoPara;
 	}
 
@@ -71,7 +83,7 @@ public class Rover {
 		return true;
 	}
 	
-		public void setViradoPara(String ptCardeal){
+	public void setViradoPara(String ptCardeal){
 			String toLower = ptCardeal.toLowerCase();
 			
 			if(toLower.equals("norte")||toLower.equals("north"))

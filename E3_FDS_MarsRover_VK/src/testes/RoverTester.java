@@ -21,7 +21,7 @@ public class RoverTester {
 
 	@Test
 	public void testSetXYFailXMaior() {
-		assertFalse(rover.setXY(6, 1));
+		assertFalse(rover.setXY(6,1));
 	}
 	@Test
 	public void testSetXYFailXNegativo() {
@@ -65,16 +65,16 @@ public class RoverTester {
 	@Test
 	public void testVirarParaADireitaAteRodar(){
 		rover.moverPorComando("RRRR");
-		int expected = 1;
-		int actual = rover.getViradoPara();
+		String expected = "Norte";
+		String actual = rover.getViradoPara();
 
 		assertEquals(expected,actual);
 	}
 	@Test
 	public void testVirarParaAEsquerdaAteRodar(){
 		rover.moverPorComando("AALLLL");
-		int expected = 1;
-		int actual = rover.getViradoPara();
+		String expected = "Norte";
+		String actual = rover.getViradoPara();
 		assertEquals(expected,actual);
 	}
 	@Test
@@ -102,7 +102,7 @@ public class RoverTester {
 	public void testDefinidoNoEnunciado1(){
 		rover.setXY(1, 2);
 		rover.moverPorComando("LMLMLMLMM");
-		String expected = ("1, 3 1");
+		String expected = ("1, 3 Norte");
 		String actual = rover.getXY()+" "+ rover.getViradoPara();
 		assertEquals(expected,actual);
 	}
@@ -111,14 +111,14 @@ public class RoverTester {
 		rover.setXY(3, 3);
 		rover.setViradoPara("east");
 		rover.moverPorComando("MMRMMRMRRM");
-		String expected = ("5, 1 2");
+		String expected = ("5, 1 Leste");
 		String actual = rover.getXY()+" "+ rover.getViradoPara();
 		assertEquals(expected,actual);
 	}
 	@Test
 	public void testSetViradoParaNorte(){
-		rover.setViradoPara("Norte");
-		assertEquals(1,rover.getViradoPara());
+		rover.setViradoPara("nORTe");
+		assertEquals("Norte",rover.getViradoPara());
 	}
 	@Test
 	public void testSetViradoParaDeveFalhar(){
