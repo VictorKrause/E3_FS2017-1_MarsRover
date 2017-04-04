@@ -22,7 +22,7 @@ import javax.swing.JOptionPane;
 
 public class StartMainClass extends JFrame {
 	
-	private Planet planeta = null;
+	private Plateu planeta = null;
 	
 	private JPanel contentPane;
 	private JTextField txtFieldX;
@@ -72,7 +72,7 @@ public class StartMainClass extends JFrame {
 				try {
 					int x = Integer.parseInt(txtFieldX.getText());
 					int y = Integer.parseInt(txtFieldY.getText());		
-					planeta = new Planet(x, y, "");
+					planeta = new Plateu(x, y, "");
 					txtFieldX.setText("");
 					txtFieldY.setText("");
 					JOptionPane.showMessageDialog(null, "Planeta criado!");

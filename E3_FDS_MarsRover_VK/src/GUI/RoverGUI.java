@@ -37,7 +37,7 @@ public class RoverGUI extends JFrame {
 	private JLabel lblViradoPara;
 	private JTextField txtFieldViradoPara;
 
-	public RoverGUI(Planet planeta) {
+	public RoverGUI(Plateu planeta) {
 		setBounds(100, 100, 501, 255);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

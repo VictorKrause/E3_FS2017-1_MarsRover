@@ -1,12 +1,12 @@
 package data;
 
-public class Planet {
+public class Plateu {
 	
 	private int maxX;
 	private int maxY;
 	private String nome;
 	
-	public Planet (int x, int y, String nome){
+	public Plateu (int x, int y, String nome){
 		this.maxX =x;
 		this.maxY=y;
 		this.nome = nome;

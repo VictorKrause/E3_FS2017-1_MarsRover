@@ -9,12 +9,12 @@ import org.junit.Test;
 
 public class RoverTester {
 
-	private Planet planet;
+	private Plateu planet;
 	private Rover rover;
 
 	@Before
 	public void beforeClassSetUp(){
-		planet = new Planet(5, 5, "Marte");
+		planet = new Plateu(5, 5, "Marte");
 		rover = new Rover(planet);
 		rover.setXY(0, 0);
 	}

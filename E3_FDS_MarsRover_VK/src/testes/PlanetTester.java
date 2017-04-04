@@ -5,17 +5,17 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 
 
-import data.Planet;
+import data.Plateu;
 
 import org.junit.Test;
 
 public class PlanetTester {
 
-	private Planet planeta;
+	private Plateu planeta;
 
 	@Before
 	public void setUpClass(){
-		planeta = new Planet(5,5, "Marte");		
+		planeta = new Plateu(5,5, "Marte");		
 	}
 
 	@Test

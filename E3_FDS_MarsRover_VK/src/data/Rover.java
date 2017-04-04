@@ -4,9 +4,9 @@ public class Rover {
 	private int xAtual;
 	private int yAtual;
 	private int viradoPara; //1 = Norte | 2 = Leste | 3 = Sul | 4 = Oeste
-	private Planet planetaAtual;
+	private Plateu planetaAtual;
 
-	public Rover (Planet planeta){
+	public Rover (Plateu planeta){
 		this.xAtual = 0;
 		this.yAtual = 0;
 		this.viradoPara = 1;
